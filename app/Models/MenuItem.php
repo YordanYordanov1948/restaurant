@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class MenuItem extends Model
 {
-    protected $fillable = ['restaurant_id', 'name', 'description', 'price', 'image'];
+    protected $fillable = ['name', 'description', 'image', 'category', 'price'];
 
     public function restaurant()
     {

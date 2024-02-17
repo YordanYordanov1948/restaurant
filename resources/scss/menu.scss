@@ -1,0 +1,41 @@
+.menu-section {
+    .section-title {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+    }
+
+    .nav-pills .nav-link {
+      color: #555;
+      background-color: #f8f9fa;
+      &:hover, &.active {
+        color: #fff;
+        background-color: #007bff;
+      }
+    }
+
+    .menu-item {
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-title {
+        font-weight: bold;
+        color: #007bff;
+      }
+
+      .card-text {
+        color: #666;
+      }
+    }
+  }
