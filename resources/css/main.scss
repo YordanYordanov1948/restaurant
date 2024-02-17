@@ -15,24 +15,36 @@ body {
     flex: 1;
 }
 
+// Define your primary color
+$primary: #fff; // Assuming white for the demonstration, replace with your desired color
+
 // Custom navbar styles
 .navbar-custom {
     background-color: $primary;
+
     .navbar-brand, .nav-link {
       color: #000;
       padding: 0 15px;
+
       &:hover {
         color: darken(#000, 10%);
       }
     }
+
     .navbar-toggler {
       border-color: rgba(0, 0, 0, 0.1);
+
       .navbar-toggler-icon {
-        color: #000;
+        background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); // SVG for the navbar toggler icon
       }
     }
 
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
+
 
 .container-fluid {
     padding-right: 15px;
