@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ReservationController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
+Route::post('/booking/store', [ReservationController::class, 'store'])->name('booking.store');

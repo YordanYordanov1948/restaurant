@@ -6,9 +6,13 @@
 <div class="container my-5">
     <h2 class="text-center mb-4">Book a Table</h2>
     <div class="row justify-content-center">
+        <div id="booking-messages">
+            <div id="booking-success" class="alert alert-success" role="alert" aria-live="polite" style="display:none;"></div>
+            <div id="booking-errors" class="alert alert-danger" role="alert" aria-live="assertive" style="display:none;"></div>
+        </div>
         <div class="col-md-8">
-            <div class="booking-form bg-light p-4 shadow rounded">
-                <form action="{{ route('booking.store') }}" method="POST">
+            <div class="bg-light p-4 shadow rounded">
+                <form id="booking-form" action="{{ route('booking.store') }}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
@@ -43,3 +47,4 @@
     </div>
 </div>
 @endsection
+
