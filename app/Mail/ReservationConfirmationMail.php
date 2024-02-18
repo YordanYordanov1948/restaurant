@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Reservation;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -15,14 +16,12 @@ class ReservationConfirmationMail extends Mailable
 
     public $reservation;
 
-
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(Reservation $reservation)
     {
         $this->reservation = $reservation;
-
     }
 
     public function build()
@@ -41,16 +40,6 @@ class ReservationConfirmationMail extends Mailable
         );
     }
 
-
-    /**
-     * Get the message content definition.
-     */
-    public function content(): Content
-    {
-        return new Content(
-            view: 'view.name',
-        );
-    }
 
     /**
      * Get the attachments for the message.

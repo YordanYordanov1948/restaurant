@@ -14,7 +14,7 @@ class ContactFormMail extends Mailable
     use Queueable, SerializesModels;
 
     public $contactData;
-    
+
     /**
      * Create a new message instance.
      */
@@ -38,16 +38,6 @@ class ContactFormMail extends Mailable
     {
         return new Envelope(
             subject: 'Contact Form Mail',
-        );
-    }
-
-    /**
-     * Get the message content definition.
-     */
-    public function content(): Content
-    {
-        return new Content(
-            view: 'view.name',
         );
     }
 
